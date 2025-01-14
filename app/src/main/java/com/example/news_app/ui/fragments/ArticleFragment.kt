@@ -28,7 +28,7 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
 
         binding.webView.apply {
             webViewClient = WebViewClient()
-            article.url?.let{
+            article.url?.let {
                 loadUrl(it)
             }
 
@@ -36,7 +36,7 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
 
         binding.fab.setOnClickListener {
             newsViewModel.addToFavourites(article)
-            Snackbar.make(view,"Added to favourites",Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(view, "Added to favourites", Snackbar.LENGTH_SHORT).show()
         }
     }
 }

@@ -6,6 +6,9 @@ import com.example.news_app.models.Article
 import java.util.Locale.IsoCountryCode
 
 class NewsRepository(val db: ArticleDatabase) {
+
+
+
     suspend fun getHeadLines(countryCode: String, pageNumber: Int) =
         RetrofitInstance.api.getHeadlines(countryCode, pageNumber)
 
